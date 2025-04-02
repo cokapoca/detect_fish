@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детектор фишинга</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 600px;
+        }
+        textarea, input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Детектор фишинговых сообщений</h1>
+    <textarea id="message" placeholder="Введите текст сообщения" rows="4"></textarea>
+    <input type="text" id="sender" placeholder="Введите отправителя (например, user@gmail.com)">
+    <button onclick="checkPhishing()">Проверить</button>
+    <div id="result"></div>
+
+    <script src="phishing.js"></script>
+</body>
+</html>
